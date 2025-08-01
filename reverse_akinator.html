@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Useless Akinator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=4NyJWwfYWX9GMG2kxEyauVtExqYLgX0bFMeP94suFLfTW8FlKWT1zXTojcEy4ioOu3LHsuWf4XDj_HqXdyd0G_ZR0hkl_m0LW793CTv6lhkML-CKRWB4BFCGBoJ2hun97-WBhGOFDxmNhS-M0Me_oEWXPs1aZ5ghwXYYIk40TWa18hUWyG4Z0dIgQmLSlMlGbWU8Chxh2kTx4DMPx_Ds8kjg7w_5WSHxlYZOw3ASkbDL1pUYczV2DuRLxxE_zvTdwsTnKR51603QffHXv3oAX-0Fyzz5AdgwEOfK69W6EUgNAAG8qCoqXlr8W3ab7t5htAgx5rh8g-B82LQMQb-HOCAxXpBk5vUz_A1yecQJ5osy4YCxsFIf-zZXW-rsH-veaC2FX2yNrWN55U66b-S4oaRGvgkdgrmKM5h3KYnB1592foLn1JQlbEXfIvMLcyxAs4glMdEVPBNVKUeNN-8bK-i4uOMZ8Q49wL9po0EN96pzJJFHwCYpKyCvE33rlcqwGYI1urqdECjHxNWAbH_7iRd9eyP3ARsVhmTsKqiL0gDmCXzSyZB8CwSKZH1xEoiFj5MCrH_CIMbn9am3HKeqFXceBxhSq_l9DCuikKr_HXDX582PXYwePBzfepPO7bQc-EVNo0KhOfmgyBJNhKhnwpOVNGlVy5iViqWArK6T_oYyyKFwkZMCNdEgsNi4zAIzQ1D7TFfaM9gy6WBRuSlABwPRg0xDBJA4fmDDdO3T4J93DqvQg0evsER_XnSEqGv6W9Hc-ckBUs0YqAEQp8ef_QSsBAsfHAD_tM6ecBS_egGx5MO3epUo-CpKwBIpImOOd66tPGNSH2GPeHFdgbY_X4YNtCgzwwMTOltRNmPpM9WHd1AQWrfgGhMp7r6dM6rQJi5H3c896HvrGGp8QasiBACjt3LIm4zUcX3ew1O9uWdX3fm3Lpqqo2Q0HpixOvE-1SlQnJ84UYRJAeEpGWZ8MONcj59oHOCtU09oB90BIvnuCW75MO5qpf9yzcApLJ1X_06AqTWUOR-hzn3toIHVNWequ46DbYwjuWywZXRlFvQcUI2ifPf9PiPdTK_MAb_JqrcvF7C003kLprtVC7vjkULYeMe0fxQ3bMy2rRkOsr3Z5BvStziAKmi4TAgzfYyhUnvwrS09uU2y6rfmWXmGHQ2pFswEXtjbGjASoHKMMqYtkxRkTw2DhS9DFNWqB5wT0y1OHXmM7lEG-kci0rtVdPLFB_tQQ5YTIYERjvr-0ihYFLoGHfF335jKVbDvE9dKXn7Dbik4_C_BIRlEyySDpgFOs8B0nqp-2NccZLO_aRPnsvsOYwmtM-qGW-UMY0XrLi9cGgi-os9bIK7F-NHGGcezS3VMyVka6irIdNzP_QXsny3BEYJ7CuCdkoi_xtgraroNJQcQZPlHp7XE-eyZvNkiCj5Z64Poc3cesK3SsZI1T3Wqf2Xsp0dYbU1dVSn3sZysLcwmfWTcTBFQRmRGZbVs-uAlYLCEakw-p1une6JNNoSe9l9jd2WKe3lotSnh3H-rLiQw0RRZ7aFq6xvRPxCaTjFzHd7UWHRcMg5hINpnckqyvSssM6vYUj1pzCsAAv-0zTazxG8tpF5y6MLULV-f5nn1C_AS0ajj0D6lBT9oqZ-4_FXCs5mojQrJCcIzm-K09fNUEqXJOShoptSAUW3PanJs101JbBPz_HE_-lx-CxFKVYAJJ5TT2nw8iwQu" nonce="89303b5b9d43fef8b78fa626ebf65af2" charset="UTF-8"></script><style>
+    :root {
+      --bg-light: linear-gradient(to right top, #ffecd2, #fcb69f);
+      --bg-dark: linear-gradient(to right top, #0f0c29, #302b63, #24243e);
+      --card-bg-light: rgba(255, 255, 255, 0.15);
+      --card-bg-dark: rgba(0, 0, 0, 0.3);
+      --text-light: #333;
+      --text-dark: #f4f4f4;
+      --accent: #8e44ad;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      transition: all 0.6s ease;
+      overflow: hidden;
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .container {
+      background: var(--card-bg-light);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      padding: 40px;
+      max-width: 700px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      transition: background 0.5s ease;
+      animation: fadeIn 1s ease;
+    }
+
+    body.dark .container {
+      background: var(--card-bg-dark);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 25px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .question {
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      min-height: 60px;
+    }
+
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .options button {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: transform 0.3s ease, background 0.3s;
+    }
+
+    .options button:hover {
+      transform: scale(1.05);
+      background-color: #a569bd;
+    }
+
+    .result {
+      font-size: 1.8rem;
+      margin-top: 20px;
+      color: #ff0080;
+      font-weight: bold;
+      opacity: 0;
+      animation: slideIn 1s forwards;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+
+    .theme-toggle input {
+      display: none;
+    }
+
+    .toggle-label {
+      display: flex;
+      align-items: center;
+      background: #555;
+      width: 70px;
+      height: 35px;
+      border-radius: 50px;
+      position: relative;
+      padding: 0 5px;
+      box-shadow: 0 0 10px #000;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .toggle-icon {
+      width: 25px;
+      height: 25px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      transition: all 0.4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #000;
+      box-shadow: 0 0 5px #000;
+    }
+
+    body.dark .toggle-label {
+      background: #2c2f4a;
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    body.dark .toggle-icon {
+      transform: translateX(35px);
+      background: #111;
+      color: #ff0;
+      box-shadow: 0 0 10px #0ff, inset 0 0 5px #0ff;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .question {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Dark Mode Switch -->
+  <div class="theme-toggle">
+    <input type="checkbox" id="darkModeToggle">
+    <label for="darkModeToggle" class="toggle-label">
+      <div class="toggle-icon" id="toggleIcon">☀️</div>
+    </label>
+  </div>
+
+  <!-- Main App -->
+  <div class="container">
+    <h1>🚀 Useless Akinator</h1>
+    <div class="question" id="question">Ready?</div>
+    <div class="options" id="options"></div>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    const allQuestions = [
+      // From both codes
+      "Is your character allergic to moonlight?",
+      "Does your character believe in WiFi spirits?",
+      "Can your character survive without pizza?",
+      "Does your character own a spaceship?",
+      "Would your character hug a cactus?",
+      "Can they communicate with pigeons?",
+      "Does your character glow in the dark emotionally?",
+      "Do they sing to plants on weekends?",
+      "Would they argue with Siri?",
+      "Are they sponsored by bananas?",
+      "Do they use JavaScript to cook?",
+      "Have they fought a bear in the metaverse?",
+      "Do they cry during Windows updates?",
+      "Have they ever been trapped in a meme?",
+      "Can they time travel through dreams?",
+      "Is your character allergic to clouds?",
+      "Does your character dream in binary?",
+      "Can your character speak fluent dolphin?",
+      "Is your character best friends with a toaster?",
+      "Has your character ever won a staring contest with a mirror?",
+      "Would your character enjoy mayonnaise concerts?",
+      "Does your character identify as a taco?",
+      "Has your character been spotted on Mars recently?",
+      "Is your character powered by AAA batteries?",
+      "Would you trust your character to babysit a raccoon?",
+      "Does your character scream at pineapples?",
+      "Can your character juggle invisible objects?",
+      "Has your character ever been a potato?",
+      "Does your character believe in unicorn taxes?",
+      "Is your character a certified worm therapist?"
+    ];
+
+    const answers = [
+      "Yes ✅", "No ❌", "Probably 🤔", "Absolutely Not 🙅",
+      "Only on Fridays 🔮", "Secretly 😎", "Who knows 🤷‍♂️", "Ask again later 🔁"
+    ];
+
+    const fakeCharacters = [
+      "A Toaster Named Greg", "Taylor Swift's Left Eyelash", "The Ghost of Internet Explorer",
+      "Justin Bieber's Forgotten Hoodie", "Your Sleep Paralysis Demon",
+      "Zuckerberg in Lizard Mode", "SpongeBob's Internet Stalker", "A Crying AI Roomba",
+      "Kim Kardashian's Fridge Light", "A Sentient Meme Folder",
+      "Toaster McGee", "Captain Cactus", "The Moon's Shadow", "Dancing Avocado",
+      "Karen, the USB Stick", "Glitchy Pigeon Lord", "Cosmic Burrito",
+      "Professor Meowington", "Sir Derp-a-Lot"
+    ];
+
+    let usedQuestions = [];
+    let questionCount = 0;
+
+    function getUniqueQuestion() {
+      if (usedQuestions.length >= allQuestions.length) return "Out of questions!";
+      let q;
+      do {
+        q = allQuestions[Math.floor(Math.random() * allQuestions.length)];
+      } while (usedQuestions.includes(q));
+      usedQuestions.push(q);
+      return q;
+    }
+
+    function showQuestion() {
+      if (questionCount >= 7) {
+        showResult();
+        return;
+      }
+
+      const qText = getUniqueQuestion();
+      document.getElementById("question").textContent = qText;
+      const optionsDiv = document.getElementById("options");
+      optionsDiv.innerHTML = '';
+      document.getElementById("result").textContent = '';
+
+      [...answers].sort(() => 0.5 - Math.random()).slice(0, 4).forEach(answer => {
+        const btn = document.createElement('button');
+        btn.textContent = answer;
+        btn.onclick = () => {
+          questionCount++;
+          showQuestion();
+        };
+        optionsDiv.appendChild(btn);
+      });
+    }
+
+    function showResult() {
+      document.getElementById("question").textContent = "Analyzing nonsense...";
+      document.getElementById("options").innerHTML = '';
+
+      setTimeout(() => {
+        const result = fakeCharacters[Math.floor(Math.random() * fakeCharacters.length)];
+        const resultDiv = document.getElementById("result");
+        resultDiv.textContent = `🎉 Your character is: ${result}!`;
+        resultDiv.style.animation = "slideIn 1s forwards";
+
+        const restartBtn = document.createElement('button');
+        restartBtn.textContent = "Try Again 🔁";
+        restartBtn.onclick = () => {
+          questionCount = 0;
+          usedQuestions = [];
+          resultDiv.textContent = '';
+          resultDiv.style.opacity = 0;
+          showQuestion();
+        };
+        document.getElementById("options").appendChild(restartBtn);
+      }, 1200);
+    }
+
+    // Toggle dark mode
+    document.getElementById("darkModeToggle").addEventListener("change", function () {
+      document.body.classList.toggle("dark");
+      const icon = document.getElementById("toggleIcon");
+      icon.textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
+    });
+
+    showQuestion();
+  </script>
+</body>
+</html>
